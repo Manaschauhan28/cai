@@ -1,0 +1,24 @@
+# syntax=docker/dockerfile:1.5
+
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+# Optional: Use mirror in Asia
+RUN npm config set registry https://registry.npmmirror.com
+
+RUN npm install --legacy-peer-deps || \
+  (echo "Retrying install..." && sleep 10 && npm install --legacy-peer-deps)
+
+COPY . .
+
+# CMD ["npm", "run", "dev"]
+RUN npm run build 
+
+FROM nginx:1.27-alpine AS final
+COPY --from=builder /app/build /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
