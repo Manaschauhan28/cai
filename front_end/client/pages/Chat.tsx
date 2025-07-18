@@ -103,7 +103,7 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      const apiUrl = `https://just-rapidly-badger.ngrok-free.app/chat/${encodeURIComponent(sessionId)}`;
+      const apiUrl = `http://44.212.129.15:8000/chat/${encodeURIComponent(sessionId)}`;
       console.log("Debug - API URL:", apiUrl);
       console.log("Debug - Raw sessionId:", sessionId);
       console.log("Debug - Encoded sessionId:", encodeURIComponent(sessionId));

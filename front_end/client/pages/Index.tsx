@@ -63,7 +63,7 @@ export default function Index() {
       setTestimonialsError(null);
 
       const response = await fetch(
-        "https://just-rapidly-badger.ngrok-free.app/testimonials",
+        "http://44.212.129.15:8000/testimonials",
         {
           method: "GET",
           headers: {

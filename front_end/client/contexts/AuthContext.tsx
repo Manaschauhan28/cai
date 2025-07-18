@@ -82,7 +82,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://just-rapidly-badger.ngrok-free.app/login",
+        "http://44.212.129.15:8000/login",
         {
           method: "POST",
           headers: {
@@ -134,7 +134,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://just-rapidly-badger.ngrok-free.app/signup",
+        "http://44.212.129.15:8000/signup",
         {
           method: "POST",
           headers: {
