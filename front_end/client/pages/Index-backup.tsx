@@ -55,7 +55,7 @@ export default function Index() {
       setTestimonialsLoading(true);
       setTestimonialsError(null);
 
-      const response = await fetch("http://44.212.129.15:8000/testimonials", {
+      const response = await fetch("http://44.212.129.15:8000/api/testimonials", {
         method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "true",

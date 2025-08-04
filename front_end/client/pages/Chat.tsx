@@ -95,7 +95,7 @@ export default function Chat() {
       if (!user?.email) return;
       try {
         const response = await fetch(
-          `http://44.212.129.15:8000/sessions?username=${encodeURIComponent(user.email)}`
+          `http://44.212.129.15:8000/api/sessions?username=${encodeURIComponent(user.email)}`
         );
         if (!response.ok) throw new Error("Failed to fetch chat history");
         const data = await response.json();
@@ -150,7 +150,7 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      const apiUrl = `http://44.212.129.15:8000/chat/${encodeURIComponent(currentSessionId)}`;
+      const apiUrl = `http://44.212.129.15:8000/api/chat/${encodeURIComponent(currentSessionId)}`;
       console.log("Debug - API URL:", apiUrl);
       console.log("Debug - Raw currentSessionId:", currentSessionId);
       console.log("Debug - Encoded currentSessionId:", encodeURIComponent(currentSessionId));
@@ -263,7 +263,7 @@ export default function Chat() {
       console.log("Fetching messages for session:", sessionId);
       
       const response = await fetch(
-        `http://44.212.129.15:8000/sessions/${sessionId}/messages`
+        `http://44.212.129.15:8000/api/sessions/${sessionId}/messages`
       );
       
       if (!response.ok) {
@@ -311,7 +311,7 @@ export default function Chat() {
       console.log("Deleting session:", sessionId);
       
       const response = await fetch(
-        `http://44.212.129.15:8000/sessions/${sessionId}`,
+        `http://44.212.129.15:8000/api/sessions/${sessionId}`,
         {
           method: "DELETE",
           headers: {
@@ -356,7 +356,7 @@ export default function Chat() {
     
     try {
       const response = await fetch(
-        `http://44.212.129.15:8000/new_chat?username=${encodeURIComponent(user.email)}`,
+        `http://44.212.129.15:8000/api/new_chat?username=${encodeURIComponent(user.email)}`,
         {
           method: "POST",
           headers: {
