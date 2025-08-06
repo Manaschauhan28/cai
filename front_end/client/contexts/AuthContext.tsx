@@ -82,7 +82,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://cigpt.ca/api/login",
+        "https://expert-proud-corgi.ngrok-free.app/api/login",
         {
           method: "POST",
           headers: {
@@ -134,7 +134,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://cigpt.ca/api/signup",
+        "https://expert-proud-corgi.ngrok-free.app/api/signup",
         {
           method: "POST",
           headers: {

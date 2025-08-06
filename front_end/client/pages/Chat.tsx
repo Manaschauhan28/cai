@@ -95,7 +95,7 @@ export default function Chat() {
       if (!user?.email) return;
       try {
         const response = await fetch(
-          `https://cigpt.ca/api/sessions?username=${encodeURIComponent(user.email)}`
+          `https://expert-proud-corgi.ngrok-free.app/api/sessions?username=${encodeURIComponent(user.email)}`
         );
         if (!response.ok) throw new Error("Failed to fetch chat history");
         const data = await response.json();
@@ -150,7 +150,7 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      const apiUrl = `https://cigpt.ca/api/chat/${encodeURIComponent(currentSessionId)}`;
+      const apiUrl = `https://expert-proud-corgi.ngrok-free.app/api/chat/${encodeURIComponent(currentSessionId)}`;
       console.log("Debug - API URL:", apiUrl);
       console.log("Debug - Raw currentSessionId:", currentSessionId);
       console.log("Debug - Encoded currentSessionId:", encodeURIComponent(currentSessionId));
@@ -263,7 +263,7 @@ export default function Chat() {
       console.log("Fetching messages for session:", sessionId);
       
       const response = await fetch(
-        `https://cigpt.ca/api/sessions/${sessionId}/messages`
+        `https://expert-proud-corgi.ngrok-free.app/api/sessions/${sessionId}/messages`
       );
       
       if (!response.ok) {
@@ -356,7 +356,7 @@ export default function Chat() {
     
     try {
       const response = await fetch(
-        `https://cigpt.ca/api/new_chat?username=${encodeURIComponent(user.email)}`,
+        `https://expert-proud-corgi.ngrok-free.app/api/new_chat?username=${encodeURIComponent(user.email)}`,
         {
           method: "POST",
           headers: {

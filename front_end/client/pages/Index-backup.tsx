@@ -55,7 +55,7 @@ export default function Index() {
       setTestimonialsLoading(true);
       setTestimonialsError(null);
 
-      const response = await fetch("https://cigpt.ca/api/testimonials", {
+      const response = await fetch("https://expert-proud-corgi.ngrok-free.app/api/testimonials", {
         method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "true",
