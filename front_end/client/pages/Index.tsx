@@ -63,7 +63,7 @@ export default function Index() {
       setTestimonialsError(null);
 
       const response = await fetch(
-        "http://44.212.129.15:8000/api/testimonials",
+        "https://44.212.129.15:8000/api/testimonials",
         {
           method: "GET",
           headers: {
