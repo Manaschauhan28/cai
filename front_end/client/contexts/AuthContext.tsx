@@ -82,7 +82,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://44.212.129.15:8000/api/login",
+        "https://cigpt.ca/api/login",
         {
           method: "POST",
           headers: {
@@ -134,7 +134,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://44.212.129.15:8000/api/signup",
+        "https://cigpt.ca/api/signup",
         {
           method: "POST",
           headers: {

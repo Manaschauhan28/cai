@@ -55,7 +55,7 @@ export default function Index() {
       setTestimonialsLoading(true);
       setTestimonialsError(null);
 
-      const response = await fetch("https://44.212.129.15:8000/api/testimonials", {
+      const response = await fetch("https://cigpt.ca/api/testimonials", {
         method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "true",
