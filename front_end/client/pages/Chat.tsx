@@ -311,7 +311,7 @@ export default function Chat() {
       console.log("Deleting session:", sessionId);
       
       const response = await fetch(
-        `http://44.212.129.15:8000/api/sessions/${sessionId}`,
+        `/api//api/sessions/${sessionId}`,
         {
           method: "DELETE",
           headers: {
